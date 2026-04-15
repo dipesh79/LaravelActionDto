@@ -1,0 +1,65 @@
+{
+    "name": "dipesh79/laravel-action-dto",
+    "description": "A minimal Action + DTO pattern for Laravel with great developer experience.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dipesh79\\LaravelActionDto\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^13.0"
+    },
+    "authors": [
+        {
+            "name": "Dipesh Khanal",
+            "email": "dipeshkhanal79@gmail.com",
+            "homepage": "https://khanaldipesh.com.np",
+            "role": "Maintainer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dipesh79\\LaravelActionDto\\LaravelActionDtoServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^4.0",
+        "rector/rector": "^2.0",
+        "laravel/pint": "^1.27",
+        "phpstan/phpstan": "2.2.x-dev"
+    },
+    "scripts": {
+        "test": "pest",
+        "lint": [
+            "@pint",
+            "@pint:test",
+            "@analyse",
+            "@rector",
+            "@rector:check"
+        ],
+        "lint:fix": [
+            "@pint"
+        ],
+        "pint": "pint",
+        "pint:test": "pint --test",
+        "analyse": "phpstan analyse src --level=10 --memory-limit=1G",
+        "rector": "rector process --config=rector.php",
+        "rector:check": "rector process --dry-run --config=rector.php"
+    }
+}
