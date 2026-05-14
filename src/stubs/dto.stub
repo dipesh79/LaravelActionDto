@@ -2,9 +2,7 @@
 
 namespace {{ namespace }};
 
-use Dipesh79\LaravelActionDto\DTOs\DataTransferObject;
-
-class {{ class }} extends DataTransferObject
+class {{ class }}
 {
     public function __construct(
         //
