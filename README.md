@@ -15,7 +15,7 @@ This Laravel package helps you generate Action, DTO, Query, and CRUD boilerplate
 ### Install Using Composer
 
 ```bash
-composer require dipesh79/laravel-action-dto
+composer require dipesh79/laravel-action-dto --dev
 ```
 
 ### Publish Configuration (Optional)
