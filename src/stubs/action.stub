@@ -2,11 +2,9 @@
 
 namespace {{ namespace }};
 
-use Dipesh79\LaravelActionDto\Actions\BaseAction;
-
-class {{ class }} extends BaseAction
+class {{ class }}
 {
-    public function handle(object $dto): mixed
+    public function handle($dto)
     {
         //
     }
